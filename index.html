@@ -52,19 +52,24 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             z-index: 1;
         }
     </style>
-</head>
-
-<body>
     <script>
         var allergy_count = 0;
         var cold_count = 0;
 
         function allergyAdd() {
             allergy_count++;
+            navigateToNextPage();
         }
 
         function coldAdd() {
             cold_count++;
+            navigateToNextPage();
+        }
+
+        function navigateToNextPage() {
+            var currentPage = window.location.hash.substr(1);
+            var nextPage = parseInt(currentPage) + 1;
+            window.location.hash = nextPage;
         }
 
         function calculateResult() {
@@ -76,38 +81,35 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             var resultText = document.getElementById("resultText");
             resultText.innerHTML = "Probability it is allergies = " + allergyPercent.toFixed(2) + "%<br> Probability it is a cold = " + coldPercent.toFixed(2) + "%";
         }
-
-        function resultsPercentage() {
-            calculateResult();
-            var resultText = document.getElementById("results");
-            resultText.innerHTML = "Results: Probability it is allergies = " + allergyPercent.toFixed(2) + "%<br> Probability it is a cold = " + coldPercent.toFixed(2) + "%";
-        }
     </script>
+</head>
+
+<body>
 
     <div id="header" class="w3-container w3-flat-carrot">
         <h1>Cold or Allergies?</h1>
     </div>
 
     <div id="content" class="w3-container">
-        <div class="page" id="one">
+        <div class="page" id="1">
             <p>Are your eyes watery or itchy?</p>
-            <a href="#two" onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>
-            <a href="#two" onclick="coldAdd();" class="w3-btn w3-black">No</a>
+            <a href="#2" onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>
+            <a href="#2" onclick="coldAdd();" class="w3-btn w3-black">No</a>
         </div>
 
-        <div class="page" id="two">
+        <div class="page" id="2">
             <p>Do you have a fever?</p>
-            <a href="#three" onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
-            <a href="#three" onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+            <a href="#3" onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
+            <a href="#3" onclick="allergyAdd();" class="w3-btn w3-black">No</a>
         </div>
 
-        <div class="page" id="three">
+        <div class="page" id="3">
             <p>Do you have a sore throat?</p>
-            <a href="#four" onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
-            <a href="#four" onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+            <a href="#4" onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
+            <a href="#4" onclick="allergyAdd();" class="w3-btn w3-black">No</a>
         </div>
 
-        <div class="page" id="four">
+        <div class="page" id="4">
             <p>Are your symptoms seasonal or chronic?</p>
             <a href="#" onclick="allergyAdd();" class="w3-btn w3-black">Seasonal</a>
             <a href="#" onclick="coldAdd();" class="w3-btn w3-black">Chronic</a>
@@ -120,7 +122,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     </div>
 
     <p id="resultText"></p>
-    <div id="results"></div>
 
 </body>
 
