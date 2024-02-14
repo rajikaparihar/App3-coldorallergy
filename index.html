@@ -59,11 +59,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         var cold_count = 0;
 
         function allergyAdd() {
-            allergy_count++;
+            allergy_count + 1;
         }
 
         function coldAdd() {
-            cold_count++;
+            cold_count + 1;
         }
 
         function calculateResult() {
@@ -151,6 +151,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         </div>
     </div><!-- /content -->
 
+   <div id="content" class="w3-container">
+      <p id="results"></p>
+      <a onclick="resultsPercentage();"class="w3-btn w-3 black"> Click to Get Your Results! </a>
+      
     <footer class="w3-bottom w3-container w3-flat-carrot">
         <p>This is the footer!</p>
     </footer>
