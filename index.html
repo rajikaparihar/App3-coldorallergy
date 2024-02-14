@@ -60,11 +60,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         var cold_count = 0;
 
         function allergyAdd() {
-            allergy_count + 1;
+            allergy_count++;
         }
 
         function coldAdd() {
-            cold_count + 1;
+            cold_count++;
         }
 
         function calculateResult() {
@@ -109,8 +109,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
         <div class="page" id="four">
             <p>Are your symptoms seasonal or chronic?</p>
-            <a onclick="allergyAdd();" class="w3-btn w3-black">Seasonal</a>
-            <a onclick="coldAdd();" class="w3-btn w3-black">Chronic</a>
+            <a href="#" onclick="allergyAdd();" class="w3-btn w3-black">Seasonal</a>
+            <a href="#" onclick="coldAdd();" class="w3-btn w3-black">Chronic</a>
+            <a href="#" onclick="calculateResult();" class="w3-btn w3-black">Get Results</a>
         </div>
     </div>
 
@@ -120,9 +121,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
     <p id="resultText"></p>
     <div id="results"></div>
-    <a onclick="resultsPercentage();" class="w3-btn w3-black"> Click to Get Your Results! </a>
 
 </body>
 
 </html>
-
