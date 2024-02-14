@@ -54,6 +54,29 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     </style>
 </head>
 
+    <script>
+        var allergy_count = 0;
+        var cold_count = 0;
+
+        function allergyAdd() {
+            allergy_count++;
+        }
+
+        function coldAdd() {
+            cold_count++;
+        }
+
+        function calculateResult() {
+            var totalQuestions = 4; // Total number of questions
+            var allergyPercent = (allergy_count / totalQuestions) * 100;
+            var coldPercent = (cold_count / totalQuestions) * 100;
+
+            // Display results
+            var resultText = document.getElementById("resultText");
+            resultText.innerHTML = "Probability it is allergies = " + allergyPercent.toFixed(2) + "%<br> Probability it is a cold = " + coldPercent.toFixed(2) + "%";
+        }
+    </script>
+   
 <body>
     <div id="header" class="w3-container w3-flat-carrot">
         <h1>Cold or Allergies?</h1>
@@ -67,6 +90,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         <p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
 
         <p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+
 
         <div class="page" id="one">
             <div id="header1" class="w3-container w3-flat-carrot">
@@ -131,28 +155,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         <p>This is the footer!</p>
     </footer>
 
-    <script>
-        var allergy_count = 0;
-        var cold_count = 0;
-
-        function allergyAdd() {
-            allergy_count++;
-        }
-
-        function coldAdd() {
-            cold_count++;
-        }
-
-        function calculateResult() {
-            var totalQuestions = 4; // Total number of questions
-            var allergyPercent = (allergy_count / totalQuestions) * 100;
-            var coldPercent = (cold_count / totalQuestions) * 100;
-
-            // Display results
-            var resultText = document.getElementById("resultText");
-            resultText.innerHTML = "Probability it is allergies = " + allergyPercent.toFixed(2) + "%<br> Probability it is a cold = " + coldPercent.toFixed(2) + "%";
-        }
-    </script>
+   
 </body>
 
 </html>
