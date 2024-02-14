@@ -102,16 +102,55 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
  </div><!-- /content -->
 	
 </div>
-
 <div class="page" id="two">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 2</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Content of page 2 goes here.</p>
-	</div>
+		<p>Do you have a fever?</p>
+	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+ </div><!-- /content -->
+
 </div>	
+<div class="page" id="three">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 3</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Do you have a sore throat?</p>
+	<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+ </div><!-- /content -->
+	
+</div>
+<div class="page" id="four">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 4</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Are your symptoms seasonal or chronic?</p>
+	<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+ </div><!-- /content -->
+	
+<body>
+
+<div class="page" id="five">
+<!-- This is the fifth page that holds the results --> 
+	<div class="w3-container w3-flat-carrot">
+		<h1>Results</h1>
+		<!-- This is the header for the results page --> 
+	</div>
+	<!-- Divider to separate text --> 
+	
+	<div id="content" class="w3-container">
+<p id="results"></p> <!-- This tells the button where to place the text for the function --> 
+		<a onclick="resultsPercentage();" class="w3-btn w3-black"> Click to Get Your Results! </a> 
+		<!-- This is the button that has the function to display the result functions --> 
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
