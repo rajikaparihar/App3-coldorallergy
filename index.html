@@ -51,10 +51,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	function resultsPercentage(){
 		var resultText = document.getElementById("results");
-		var AllergyPercent = (allergy_count/4)*100; // This variable calculates the allergy percent by taking the total allergy count,dividing by total number of questions, and then multiplying it by 100.  
-		var ColdPercent = (cold_count/4)*100; // This variable calculates the cold percent by taking the total cold count, diving it by the total number of questions, then multiplying it by 100. 
-		resultText.innerHTML = "Probability it is allergies = " + AllergyPercent + "%" + "<br> Probability it is a cold = " + ColdPercent + "%"; // Displayed text when the function is called.  
-	};
+		var AllergyPercent = (allergy_count/4)*100; // This variable calculates the allergy percent by taking the allergy count, dividing it by the total number of questions,and multiplying by 100.  
+		var ColdPercent = (cold_count/4)*100; // This variable calculates the cold percent by taking the total cold count, diving it by the total number of questions, and multiplying by 100. 
+		resultText.innerHTML = "Probability it is allergies = " + AllergyPercent + "%" + "<br> Probability it is a cold = " + ColdPercent + "%"; // Text displayed when function is run.
+	}
 	
 	
   </script>
@@ -68,7 +68,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 {
      margin: 0em;
 }
-
 
 .page 
 {
@@ -89,7 +88,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </style>
 
 <body>
-<!--Survey introduction page-->
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>Cold or Allergies?</h1>
 </div>
@@ -103,7 +101,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
-<!--page one question and buttons-->
+<!-- page 2 questions and buttons -->
 <div class="page" id="one">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 1</h1>
@@ -113,7 +111,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         <p>Are your eyes watery or itchy?</p>   
 	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
         <a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
- </div><!-- page 2 question and buttons -->
+ </div><!-- page 2 questions and buttons -->
 
 </div>
 <div class="page" id="two">
@@ -154,16 +152,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <body>
 
 <div class="page" id="five">
-<!-- holds the results for each of the individula attributes --> 
+<!-- holds the results for each of the individulal attributes --> 
 	<div class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
 <!-- Result page header --> 
 	</div>
-<!-- Divider to separate text from page content --> 
+<!-- Divider to separate text --> 
 	
 	<div id="content" class="w3-container">
-<!-- This tells the button where to place the text for the function --> 
-<p id="results"></p>
+<p id="results"></p> <!-- This tells the button where to place the text for the function --> 
 		<a onclick="resultsPercentage();" class="w3-btn w3-black"> Click to Get Your Results! </a> 
 <!-- This is the button that has the function to display the result functions --> 
 
@@ -174,6 +171,3 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </body>
 </html>
 
-
-</body>
-</html>
