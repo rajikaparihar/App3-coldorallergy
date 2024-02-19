@@ -7,7 +7,7 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
 Authors in chronological order of contribution:
 Tim Riedel
-Rajika Singh Parihar
+Author 2
  
 Further Information:
 http://cns.utexas.edu/fri
@@ -51,9 +51,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	function resultsPercentage(){
 		var resultText = document.getElementById("results");
-		var AllergyPercent = (allergy_count/4)*100; // This variable calculates the allergy percent by taking the allergy count and dividing it by the total number of questions and multiplying by 100.  
-		var ColdPercent = (cold_count/4)*100; // This variable calculates the cold percent by taking the total cold count and diving it by the total number of questions and multiplying by 100. 
-		resultText.innerHTML = "Probability it is allergies = " + AllergyPercent + "%" + "<br> Probability it is a cold = " + ColdPercent + "%"; // This is the text displayed when the function is in use. 
+		var AllergyPercent = (allergy_count/4)*100; // This variable calculates the allergy percent by taking the total allergy count,dividing by total number of questions, and then multiplying it by 100.  
+		var ColdPercent = (cold_count/4)*100; // This variable calculates the cold percent by taking the total cold count, diving it by the total number of questions, then multiplying it by 100. 
+		resultText.innerHTML = "Probability it is allergies = " + AllergyPercent + "%" + "<br> Probability it is a cold = " + ColdPercent + "%"; // Displayed text when the function is called.  
+
+	function remove(w3-btn){
+		w3-btn.remove = true;
 	}
 	
 	
@@ -156,7 +159,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<h1>Results</h1>
 		<!-- This is the header for the results page --> 
 	</div>
-	<!-- Divider to separate text --> 
+	<!-- Divider to separate text from page content --> 
 	
 	<div id="content" class="w3-container">
 <p id="results"></p> <!-- This tells the button where to place the text for the function --> 
